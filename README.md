@@ -1,104 +1,104 @@
-# Python & React Code Examples
+# Примеры кода на Python и React
 
-Production-ready code samples demonstrating backend and frontend development skills.
+Готовые к продакшену примеры кода, демонстрирующие навыки backend и frontend разработки.
 
-## Overview
+## Обзор
 
-This repository contains standalone, well-documented code examples extracted from real projects. Each file is self-contained and demonstrates specific patterns and techniques.
+Репозиторий содержит самостоятельные, хорошо документированные примеры кода из реальных проектов. Каждый файл независим и демонстрирует конкретные паттерны и техники.
 
-## Python Examples
+## Python
 
-### 1. Hybrid Search Service (`python/hybrid_search_service.py`)
+### 1. Сервис гибридного поиска (`python/hybrid_search_service.py`)
 
-A production-ready semantic search service using vector embeddings.
+Сервис семантического поиска с использованием векторных эмбеддингов.
 
-**Key Features:**
-- Hybrid search combining keyword matching with semantic similarity
-- PostgreSQL + pgvector integration for vector storage
-- Sentence-transformers for multilingual embeddings
-- Batch processing with progress tracking
-- Russian language stemming support
-- Configurable similarity thresholds
+**Возможности:**
+- Гибридный поиск: комбинация keyword-matching и семантического сходства
+- Интеграция PostgreSQL + pgvector для хранения векторов
+- Sentence-transformers для мультиязычных эмбеддингов
+- Батч-обработка с прогресс-баром
+- Поддержка стемминга для русского языка
+- Настраиваемые пороги схожести
 
-**Tech Stack:**
+**Стек:**
 - Python 3.10+
 - sentence-transformers
 - SQLAlchemy (async)
 - PostgreSQL + pgvector
 - NumPy
 
-**Demonstrates:**
-- Async/await patterns
-- Lazy loading with caching
-- Dataclasses for configuration
-- Raw SQL with parameterized queries
-- Vector similarity search (cosine distance)
+**Демонстрирует:**
+- Async/await паттерны
+- Ленивая загрузка с кешированием
+- Dataclasses для конфигурации
+- Raw SQL с параметризованными запросами
+- Векторный поиск (косинусное расстояние)
 
 ---
 
-### 2. Text Chunking Service (`python/text_chunking_service.py`)
+### 2. Сервис чанкирования текста (`python/text_chunking_service.py`)
 
-A service for splitting documents into chunks optimized for RAG (Retrieval-Augmented Generation).
+Сервис для разбиения документов на чанки, оптимизированный для RAG (Retrieval-Augmented Generation).
 
-**Key Features:**
-- Smart sentence-boundary detection
-- Configurable chunk size and overlap
-- Email/document metadata handling
-- Clean text preprocessing
-- Chat message chunking support
+**Возможности:**
+- Умное определение границ предложений
+- Настраиваемый размер чанков и перекрытие
+- Обработка метаданных email/документов
+- Предобработка и очистка текста
+- Поддержка чанкирования чат-сообщений
 
-**Tech Stack:**
+**Стек:**
 - Python 3.10+
-- Standard library only (no dependencies)
+- Только стандартная библиотека (без зависимостей)
 
-**Demonstrates:**
-- Clean architecture with dataclasses
-- Regex-based text processing
-- Algorithm for optimal split point detection
-- Utility functions for common use cases
-- Comprehensive docstrings and type hints
+**Демонстрирует:**
+- Чистая архитектура с dataclasses
+- Обработка текста с помощью regex
+- Алгоритм поиска оптимальной точки разбиения
+- Утилитарные функции для типовых случаев
+- Подробные docstrings и type hints
 
 ---
 
-## React Examples
+## React
 
-### 3. Chat Interface (`react/ChatInterface.tsx`)
+### 3. Чат-интерфейс (`react/ChatInterface.tsx`)
 
-A full-featured chat interface for AI assistants.
+Полнофункциональный чат-интерфейс для AI-ассистентов.
 
-**Key Features:**
-- Custom Markdown renderer (zero dependencies)
-- Session management (history, create, delete)
-- Source citations with document preview modal
-- Responsive design (desktop sidebar + mobile overlay)
-- Loading states and error handling
-- Quick action suggestions
+**Возможности:**
+- Кастомный Markdown-рендерер (без внешних зависимостей)
+- Управление сессиями (история, создание, удаление)
+- Цитирование источников с превью документа
+- Адаптивный дизайн (сайдбар на десктопе + оверлей на мобильных)
+- Состояния загрузки и обработка ошибок
+- Быстрые действия-подсказки
 
-**Tech Stack:**
+**Стек:**
 - React 18
 - TypeScript
 - Tailwind CSS
-- Lucide React (icons)
+- Lucide React (иконки)
 
-**Demonstrates:**
+**Демонстрирует:**
 - React hooks (useState, useEffect, useMemo, useRef)
-- Component composition and props typing
-- Custom rendering logic without external libraries
-- Responsive design patterns
-- Accessible UI components
-- Event handling and form submission
+- Композиция компонентов и типизация props
+- Кастомная логика рендеринга без внешних библиотек
+- Паттерны адаптивного дизайна
+- Доступные UI-компоненты
+- Обработка событий и отправка форм
 
 ---
 
-## Usage
+## Использование
 
 ### Python
 
 ```bash
-# Install dependencies
+# Установка зависимостей
 pip install sentence-transformers sqlalchemy asyncpg numpy
 
-# Run example
+# Запуск примера
 python python/hybrid_search_service.py
 python python/text_chunking_service.py
 ```
@@ -106,29 +106,29 @@ python python/text_chunking_service.py
 ### React
 
 ```bash
-# Copy ChatInterface.tsx to your Next.js/React project
-# Install dependencies
+# Скопируйте ChatInterface.tsx в ваш Next.js/React проект
+# Установите зависимости
 npm install lucide-react
 
-# Import and use
+# Импорт и использование
 import ChatInterface from './ChatInterface'
 ```
 
 ---
 
-## Code Quality
+## Качество кода
 
-All examples follow best practices:
+Все примеры следуют лучшим практикам:
 
 - **Type hints** (Python) / **TypeScript** (React)
-- **Comprehensive docstrings** and comments
-- **Error handling** with meaningful messages
-- **Configurable** via dataclasses/interfaces
-- **Testable** with example usage in `__main__`
-- **Production-ready** patterns from real applications
+- **Подробные docstrings** и комментарии
+- **Обработка ошибок** с понятными сообщениями
+- **Конфигурируемость** через dataclasses/interfaces
+- **Тестируемость** с примерами использования в `__main__`
+- **Production-ready** паттерны из реальных приложений
 
 ---
 
-## License
+## Лицензия
 
-MIT License - feel free to use in your projects.
+MIT License — свободно используйте в своих проектах.
